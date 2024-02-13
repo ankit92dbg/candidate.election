@@ -168,7 +168,57 @@ $endPart = explode('.',$endPart);
                         <li class="nav-item sub-menu" onclick="showTab('#birthday','.inner-tab-data','.birthdayTab');$('#action').val('birthdayTab');load_data()">
                           <a class="nav-link" aria-current="page" href="javascript:void(0);">Birthday List</a>
                         </li>
+                        <li class="nav-item sub-menu" onclick="showTab('#educationList','.inner-tab-data','.educationListTab');$('#action').val('educationListTab');load_data()">
+                          <a class="nav-link" aria-current="page" href="javascript:void(0);">Education Wise List</a>
+                        </li>
+                        <li class="nav-item sub-menu" onclick="showTab('#homeShift','.inner-tab-data','.homeShiftTab');$('#action').val('homeShiftTab');load_data()">
+                          <a class="nav-link" aria-current="page" href="javascript:void(0);">Home Shifted List</a>
+                        </li>
+                        <li class="nav-item sub-menu" onclick="showTab('#newVoters','.inner-tab-data','.newVotersTab');$('#action').val('newVotersTab');load_data()">
+                          <a class="nav-link" aria-current="page" href="javascript:void(0);">New Voters List</a>
+                        </li>
+                        <li class="nav-item sub-menu" onclick="showTab('#professional','.inner-tab-data','.professionalTab');$('#action').val('professionalTab');load_data()">
+                          <a class="nav-link" aria-current="page" href="javascript:void(0);">Profession Wise List</a>
+                        </li>
+                        <li class="nav-item sub-menu" onclick="showTab('#outsideLocation','.inner-tab-data','.outsideLocationTab');$('#action').val('outsideLocationTab');load_data()">
+                          <a class="nav-link" aria-current="page" href="javascript:void(0);">Outside Location List</a>
+                        </li>
+                        <li class="nav-item sub-menu" onclick="showTab('#labharthi','.inner-tab-data','.labharthiTab');$('#action').val('labharthiTab');load_data()">
+                          <a class="nav-link" aria-current="page" href="javascript:void(0);">Labharthi List</a>
+                        </li>
           </ul>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link <?php echo ($endPart[0]=='scheme' || $endPart[0]=='add-scheme' || $endPart[0]=='edit-scheme') ? 'active' : ''; ?>" href="scheme.php">
+            <div class="icon icon-shape icon-sm border-radius-md text-center me-2 d-flex align-items-center justify-content-center">
+              <i class="fa fa-list text-warning text-sm opacity-10" style="color:#8008e7 !important;"></i>
+            </div>
+            <span class="nav-link-text ms-1">Scheme</span>
+          </a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link <?php echo ($endPart[0]=='voters') ? 'active' : ''; ?>" href="leaders.php">
+            <div class="icon icon-shape icon-sm border-radius-md text-center me-2 d-flex align-items-center justify-content-center">
+              <i class="fa fa-volume-up text-warning text-sm opacity-10" style="color:#17ce02 !important;"></i>
+            </div>
+            <span class="nav-link-text ms-1">Campaign</span>
+          </a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link <?php echo ($endPart[0]=='voters') ? 'active' : ''; ?>" href="leaders.php">
+            <div class="icon icon-shape icon-sm border-radius-md text-center me-2 d-flex align-items-center justify-content-center">
+              <i class="fa fa-twitter text-warning text-sm opacity-10" style="color:#02a5d5 !important;"></i>
+            </div>
+            <span class="nav-link-text ms-1">Social Media</span>
+          </a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link <?php echo ($endPart[0]=='voters') ? 'active' : ''; ?>" href="leaders.php">
+            <div class="icon icon-shape icon-sm border-radius-md text-center me-2 d-flex align-items-center justify-content-center">
+              <i class="fa fa-file text-warning text-sm opacity-10" style="color:#c2c100 !important;"></i>
+            </div>
+            <span class="nav-link-text ms-1">Voter Survey</span>
+          </a>
         </li>
         <!-- <li class="nav-item">
           <a class="nav-link <?php echo ($endPart[0]=='upload-csv') ? 'active' : ''; ?>" href="upload-csv.php">

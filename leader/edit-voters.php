@@ -255,6 +255,11 @@ $breadCrumbName = "Edit Voter";
                                 <option value="" selected="">Please Select</option>
                                 <option value="0">Hindu</option>
                                 <option value="1">Muslim</option>
+                                <option value="2">Christian</option>
+                                <option value="3">Sikh</option>
+                                <option value="4">Buddhist</option>
+                                <option value="5">Jain</option>
+                                <option value="6">NRI</option>
                             </select>
                         </div>
                     </div>
@@ -296,8 +301,212 @@ $breadCrumbName = "Edit Voter";
                     </div>
                     <div class="col-4">
                         <div class="mb-3">
+                            <label class="label">Education</label>
+                            <select id="education" onchange="changeEducation(this.value)" name="education" class="form-select">
+                                <option value="" selected="">Please Select</option>
+                                <option value="0">Uneducated</option>
+                                <option value="1">10th</option>
+                                <option value="2">12th</option>
+                                <option value="3">Undergraduate</option>
+                                <option value="4">Graduate</option>
+                                <option value="5">Post Graduate</option>
+                                <option value="6">PHD</option>
+                                <option value="7">Other</option>
+                            </select>
+                            <input style="margin-top:2%;display:none;" type="text" id="education_other" name="education_other" class="form-control form-control-lg" placeholder="Other(Education)">
+                        </div>
+                    </div>
+                    <div class="col-4">
+                        <div class="mb-3">
                             <label class="label">Profile Image</label>
                             <input type="file" name="profile_image" class="form-control form-control-lg" placeholder="" aria-label="Password">
+                        </div>
+                    </div>
+                    <div class="col-4">
+                        <div class="mb-3">
+                            <label class="label">Profession</label>
+                            <select id="profession" onchange="changeProfession(this.value)" name="profession" class="form-select">
+                                <option value="" selected="">Please Select</option>
+                                <option value="0">Student</option>
+                                <option value="1">Unemployed</option>
+                                <option value="2">Self Employed</option>
+                                <option value="3">Farmer</option>
+                                <option value="4">Teacher</option>
+                                <option value="5">Govt Forces</option>
+                                <option value="6">Job Pvt Sector</option>
+                                <option value="7">Job Govt Sector</option>
+                                <option value="8">Police officer</option>
+                                <option value="9">Dentist</option>
+                                <option value="10">Doctor</option>
+                                <option value="11">Journalist</option>
+                                <option value="12">CA / Account</option>
+                                <option value="13">Advocates</option>
+                                <option value="14">Engineer</option>
+                                <option value="15">Local Market Business</option>
+                                <option value="16">Corporate Business</option>
+                                <option value="17">School Owner</option>
+                                <option value="18">Hospital Owner</option>
+                                <option value="19">Multiple Business</option>
+                                <option value="20">Barber Salon</option>
+                                <option value="21">Driving Work Business</option>
+                                <option value="22">GIG WORKER</option>
+                                <option value="23">Daily Mazdoor</option>
+                                <option value="24">Local Market Worker</option>
+                                <option value="25">Other</option>
+                            </select>
+                            <input style="margin-top:2%;display:none;" type="text" id="profession_other" name="profession_other" class="form-control form-control-lg" placeholder="Other(Profession)">
+                        </div>
+                    </div>
+                    <div class="row" style="border-style: dotted;margin-left: 0%;padding-bottom: 2%;">
+                        <div class="col-4">
+                            <label class="label">Home Shifted</label>
+                            <select id="homeShifted" name="homeShifted" onchange="homeShiftedChange(this.value)" class="form-select">
+                                <option value="" selected="">Please Select</option>
+                                <option value="0">No</option>
+                                <option value="1">Yes</option>
+                            </select>
+                        </div>
+                        <div class="col-3" id="homeShiftedConstituency" style="margin-top:2%;display:none;">
+                            <div class="form-check">
+                                <input class="form-check-input constituency-label" type="radio" onchange="constituencyChange(this.value)" value="0" name="constituencyHomeShifted" id="constituencyHomeShifted">
+                                <label class="form-check-label" for="flexRadioDefault1">
+                                   Within Constituency
+                                </label>
+                            </div>
+                            <div class="form-check">
+                                <input class="form-check-input constituency-label" type="radio" onchange="constituencyChange(this.value)" value="1" name="constituencyHomeShifted" id="constituencyHomeShifted">
+                                <label class="form-check-label" for="flexRadioDefault2">
+                                    Outside Constituency
+                                </label>
+                            </div>
+                        </div>
+                        <div class="col-5" id="homeShiftedAddWithin" style="display:none;">
+                            <label class="label">Address List</label>
+                            <select id="homeShiftedAddress" name="homeShiftedAddress" class="form-select">
+                                <option value="" selected="">Please Select</option>
+                            </select>
+                        </div>
+                        <div class="col-5" id="homeShiftedAddOutside" style="display:none;">
+                           <div class="row">
+                                <div class="col-12">
+                                    <div class="mb-3">
+                                        <label class="label">Country</label>
+                                        <select id="home_shifted_country" onchange="load_state(this.value,'#home_shifted_state','#home_shifted_city')" name="home_shifted_country" class="form-select">
+                                            <option value="" selected>Please Select</option>
+                                        </select>   
+                                    </div>
+                                </div>
+                                <div class="col-12">
+                                    <div class="mb-3">
+                                        <label class="label">State</label>
+                                        <select id="home_shifted_state" onchange="load_city(this.value,'#home_shifted_city')" name="home_shifted_state" class="form-select">
+                                            <option value="" selected>Please Select</option>
+                                        </select>   
+                                    </div>
+                                </div>
+                                <div class="col-12">
+                                    <div class="mb-3">
+                                        <label class="label">City</label>
+                                        <select id="home_shifted_city" name="home_shifted_city" class="form-select">
+                                            <option value="" selected>Please Select</option>
+                                        </select>   
+                                    </div>
+                                </div>
+                                <div class="col-12">
+                                    <div class="mb-3">
+                                        <label class="label">Address</label>
+                                        <textarea id="home_shifted_address" name="home_shifted_address" class="form-control form-control-lg"></textarea>
+                                    </div>
+                                </div>
+                           </div> 
+                        </div>
+                    </div>
+                    <div class="row" style="border-style: dotted;margin-left: 0%;padding-bottom: 2%;margin-top:2%">
+                        <div class="col-4">
+                            <label class="label">Outside Location</label>
+                            <select id="outsideLocation" name="outsideLocation" onchange="outsideLocationChange(this.value)" class="form-select">
+                                <option value="" selected="">Please Select</option>
+                                <option value="0">No</option>
+                                <option value="1">Yes</option>
+                            </select>
+                        </div>
+                        <div class="col-3" id="outsideLocationConstituency" style="margin-top:2%;display:none;">
+                            <div class="form-check">
+                                <input class="form-check-input constituency-outside-label" type="radio" onchange="constituencyOutsideChange(this.value)" value="0" name="constituencyOutside" id="constituencyOutside">
+                                <label class="form-check-label" for="flexRadioDefault1">
+                                   Within Constituency
+                                </label>
+                            </div>
+                            <div class="form-check">
+                                <input class="form-check-input constituency-outside-label" type="radio" onchange="constituencyOutsideChange(this.value)" value="1" name="constituencyOutside" id="constituencyOutside">
+                                <label class="form-check-label" for="flexRadioDefault2">
+                                    Outside Constituency
+                                </label>
+                            </div>
+                        </div>
+                        <div class="col-5" id="outsideLocationAddWithin" style="display:none;">
+                            <label class="label">Address List</label>
+                            <select id="outsideLocationAddress" name="outsideLocationAddress" class="form-select">
+                                <option value="" selected="">Please Select</option>
+                            </select>
+                        </div>
+                        <div class="col-5" id="outsideLocationAddOutside" style="display:none;">
+                           <div class="row">
+                                <div class="col-12">
+                                    <div class="mb-3">
+                                        <label class="label">Country</label>
+                                        <select id="outside_location_country" onchange="load_state(this.value,'#outside_location_state','#outside_location_city')" name="outside_location_country" class="form-select">
+                                            <option value="" selected>Please Select</option>
+                                        </select>   
+                                    </div>
+                                </div>
+                                <div class="col-12">
+                                    <div class="mb-3">
+                                        <label class="label">State</label>
+                                        <select id="outside_location_state" onchange="load_city(this.value,'#outside_location_city')" name="outside_location_state" class="form-select">
+                                            <option value="" selected>Please Select</option>
+                                        </select>   
+                                    </div>
+                                </div>
+                                <div class="col-12">
+                                    <div class="mb-3">
+                                        <label class="label">City</label>
+                                        <select id="outside_location_city" name="outside_location_city" class="form-select">
+                                            <option value="" selected>Please Select</option>
+                                        </select>   
+                                    </div>
+                                </div>
+                                <div class="col-12">
+                                    <div class="mb-3">
+                                        <label class="label">Address</label>
+                                        <textarea id="outside_location_address" name="outside_location_address" class="form-control form-control-lg"></textarea>
+                                    </div>
+                                </div>
+                           </div> 
+                        </div>
+                    </div>
+                    <div class="col-4">
+                        <div class="mb-3">
+                            <label class="label">Labharthi(center)</label>
+                            <select id="labharthi_center" name="labharthi_center" class="form-select">
+                                <option value="" selected="">Please Select</option>
+                            </select>
+                        </div>
+                    </div>
+                    <div class="col-4">
+                        <div class="mb-3">
+                            <label class="label">Labharthi(state)</label>
+                            <select id="labharthi_state" name="labharthi_state" class="form-select">
+                                <option value="" selected="">Please Select</option>
+                            </select>
+                        </div>
+                    </div>
+                    <div class="col-4">
+                        <div class="mb-3">
+                            <label class="label">Labharthi(candidate)</label>
+                            <select id="labharthi_candidate" name="labharthi_candidate" class="form-select">
+                                <option value="" selected="">Please Select</option>
+                            </select>
                         </div>
                     </div>
                     <div class="col-4">
@@ -326,7 +535,7 @@ $breadCrumbName = "Edit Voter";
             $('#message').html('');
             event.preventDefault();
             $.ajax({
-                url:"../ajax/edit-voters.php",
+                url:"../ajax/leader/edit-voters.php",
                 method:"POST",
                 data: new FormData(this),
                 dataType:"json",
@@ -406,14 +615,55 @@ $breadCrumbName = "Edit Voter";
                         option_voter_label += `<option value="${data.voter_label[i].id}">${data.voter_label[i].label}</option>`
                     }
 
-                    //voter_label
+                    //political party
                     let option_political_party = [];
                     option_political_party += '<option value="" selected>Please Select</option>'
                     for(let i=0; i < data.political_party.length; i++){
                         option_political_party += `<option value="${data.political_party[i].id}">${data.political_party[i].name}</option>`
                     }
+ //country
+ let option_country = [];
+                    option_country += '<option value="" selected>Please Select</option>'
+                    for(let i=0; i < data.country.length; i++){
+                        option_country += `<option value="${data.country[i].id}">${data.country[i].name}</option>`
+                    }
 
-                  
+                    //address
+                    let option_address = [];
+                    option_address += '<option value="" selected>Please Select</option>'
+                    for(let i=0; i < data.address.length; i++){
+                        option_address += `<option value="${data.address[i].SECTION_NAME_EN}">${data.address[i].SECTION_NAME_EN}</option>`
+                    }
+
+                     //labharthi center
+                     let option_labharthi_center = [];
+                    option_labharthi_center += '<option value="" selected>Please Select</option>'
+                    for(let i=0; i < data.labharthi_center.length; i++){
+                        option_labharthi_center += `<option value="${data.labharthi_center[i].id}">${data.labharthi_center[i].scheme_name}</option>`
+                    }
+
+                     //labharthi state
+                    let option_labharthi_state = [];
+                    option_labharthi_state += '<option value="" selected>Please Select</option>'
+                    for(let i=0; i < data.labharthi_state.length; i++){
+                        option_labharthi_state += `<option value="${data.labharthi_state[i].id}">${data.labharthi_state[i].scheme_name}</option>`
+                    }
+
+                    //labharthi candidate
+                    let option_labharthi_candidate = [];
+                    option_labharthi_candidate += '<option value="" selected>Please Select</option>'
+                    for(let i=0; i < data.labharthi_candidate.length; i++){
+                        option_labharthi_candidate += `<option value="${data.labharthi_candidate[i].id}">${data.labharthi_candidate[i].scheme_name}</option>`
+                    }
+
+
+                    $('#labharthi_center').html(option_labharthi_center)
+                    $('#labharthi_state').html(option_labharthi_state)
+                    $('#labharthi_candidate').html(option_labharthi_candidate)
+                    $('#home_shifted_country').html(option_country)
+                    $('#homeShiftedAddress').html(option_address)
+                    $('#outsideLocationAddress').html(option_address)
+                    $('#outside_location_country').html(option_country)
                     $('#political_party').html(option_political_party)
                     $('#voter_label').html(option_voter_label)
                     $('#SLNOINPART').html(option_SLNOINPART_no)
@@ -446,6 +696,15 @@ $breadCrumbName = "Edit Voter";
                     $('#RELATION_PART_NO').val(data.voterData.RELATION_PART_NO)
                     $('#RELATION_SLNOINPART').val(data.voterData.RELATION_SLNOINPART)
 
+                    $('#education_other').val(data.voterData.other_education)
+                    $('#profession_other').val(data.voterData.other_profession)
+                    if(data.voterData.education=='7'){
+                        $('#education_other').show()
+                    }
+                    if(data.voterData.profession=='25'){
+                        $('#profession_other').show()
+                    }
+
                     $('#AC_NO option[value="'+data.voterData.AC_NO+'"]').attr("selected", "selected");
                     $('#PART_NO option[value="'+data.voterData.PART_NO+'"]').attr("selected", "selected");
                     $('#SLNOINPART option[value="'+data.voterData.SLNOINPART+'"]').attr("selected", "selected");
@@ -457,6 +716,49 @@ $breadCrumbName = "Edit Voter";
                     $('#isMarried option[value="'+data.voterData.isMarried+'"]').attr("selected", "selected");
                     $('#political_party option[value="'+data.voterData.political_party+'"]').attr("selected", "selected");
                     $('#isDead option[value="'+data.voterData.isDead+'"]').attr("selected", "selected");
+
+                    $('#education option[value="'+data.voterData.education+'"]').attr("selected", "selected");
+                    $('#profession option[value="'+data.voterData.profession+'"]').attr("selected", "selected");
+                    $('#labharthi_center option[value="'+data.voterData.labharthi_center+'"]').attr("selected", "selected");
+                    $('#labharthi_state option[value="'+data.voterData.labharthi_state+'"]').attr("selected", "selected");
+                    $('#labharthi_candidate option[value="'+data.voterData.labharthi_candidate+'"]').attr("selected", "selected");
+
+                    $('#homeShifted option[value="'+data.voterData.isHomeShifted+'"]').attr("selected", "selected");
+                    if(data.voterData.isHomeShifted!=0){
+                        homeShiftedChange(data.voterData.isHomeShifted)
+                    }    
+                    $("input[name=constituencyHomeShifted][value='"+data.voterData.isHomeShiftedWithin+"']").prop("checked",true);
+                    if(data.voterData.isHomeShifted!=0){
+                        constituencyChange(data.voterData.isHomeShiftedWithin)
+                    }  
+                    $('#homeShiftedAddress option[value="'+data.voterData.shiftedAddress+'"]').attr("selected", "selected");
+                    $('#home_shifted_country option[value="'+data.voterData.shifted_country+'"]').attr("selected", "selected");
+                    load_state(data.voterData.shifted_country,"#home_shifted_state",null)
+                    load_city(data.voterData.shifted_state,"#home_shifted_city")
+                    setTimeout(() => {
+                        $('#home_shifted_state option[value="'+data.voterData.shifted_state+'"]').attr("selected", "selected");
+                        $('#home_shifted_city option[value="'+data.voterData.shifted_city+'"]').attr("selected", "selected");
+                    }, 1000);
+                    $('#home_shifted_address').val(data.voterData.shifted_address)
+
+                    $('#outsideLocation option[value="'+data.voterData.isStayingOutside+'"]').attr("selected", "selected");
+
+                    if(data.voterData.isStayingOutside!=0){
+                        outsideLocationChange(data.voterData.isStayingOutside)
+                    }
+                    $("input[name=constituencyOutside][value='"+data.voterData.isStayingOutsideWithin+"']").prop("checked",true);
+                    if(data.voterData.isStayingOutside!=0){
+                        constituencyOutsideChange(data.voterData.isStayingOutsideWithin)
+                    }
+                    $('#outsideLocationAddress option[value="'+data.voterData.stayingAddress+'"]').attr("selected", "selected");
+                    $('#outside_location_country option[value="'+data.voterData.staying_country+'"]').attr("selected", "selected");
+                    load_state(data.voterData.staying_country,"#outside_location_state",null)
+                    load_city(data.voterData.staying_state,"#outside_location_city")
+                    setTimeout(() => {
+                        $('#outside_location_state option[value="'+data.voterData.staying_state+'"]').attr("selected", "selected");
+                        $('#outside_location_city option[value="'+data.voterData.staying_city+'"]').attr("selected", "selected");
+                    }, 1000);
+                    $('#outside_location_address').val(data.voterData.staying_address)
 
 
                     $('#overlay').hide()
@@ -527,5 +829,108 @@ $breadCrumbName = "Edit Voter";
                 }  
            })  
       } 
+
+      function changeEducation(value){
+    if(value=="7"){
+        $('#education_other').show()
+    }else{
+        $('#education_other').hide()
+    }
+}  
+function changeProfession(value){
+    if(value=="25"){
+        $('#profession_other').show()
+    }else{
+        $('#profession_other').hide()
+    }
+}  
+function homeShiftedChange(value){
+    if(value=="1"){
+        $('#homeShiftedConstituency').show()
+        $('#homeShiftedAddWithin').hide()
+        $('#homeShiftedAddOutside').hide()
+        $('.constituency-label').prop('checked',false);
+    }else{
+        $('#homeShiftedConstituency').hide()
+        $('#homeShiftedAddWithin').hide()
+        $('#homeShiftedAddOutside').hide()
+    }
+}   
+
+function constituencyChange(value){
+    if(value=="0"){
+        $('#homeShiftedAddWithin').show()
+        $('#homeShiftedAddOutside').hide()
+    }else{
+        $('#homeShiftedAddWithin').hide()
+        $('#homeShiftedAddOutside').show()
+    }
+} 
+
+function outsideLocationChange(value){
+    if(value=="1"){
+        $('#outsideLocationConstituency').show()
+        $('#outsideLocationAddWithin').hide()
+        $('#outsideLocationAddOutside').hide()
+        $('.constituency-outside-label').prop('checked',false);
+    }else{
+        $('#outsideLocationConstituency').hide()
+        $('#outsideLocationAddWithin').hide()
+        $('#outsideLocationAddOutside').hide()
+    }
+}   
+
+function constituencyOutsideChange(value){
+    if(value=="0"){
+        $('#outsideLocationAddWithin').show()
+        $('#outsideLocationAddOutside').hide()
+    }else{
+        $('#outsideLocationAddWithin').hide()
+        $('#outsideLocationAddOutside').show()
+    }
+} 
+
+function load_state(val,id,resetId)  
+      {  
+        $('#overlay').show()
+           $.ajax({  
+                url:"../ajax/master-data.php",  
+                method:"POST",  
+                data:{country:val},   
+                success:function(data){  
+                    let option = [];
+                    option += '<option value="" selected>Please Select</option>'
+                    for(let i=0; i < data.state.length; i++){
+                        option += `<option value="${data.state[i].id}">${data.state[i].name}</option>`
+                    }
+                    $(id).html(option)
+                    if(resetId!=null){
+                        let optionReset = [];
+                        optionReset += '<option value="" selected>Please Select</option>'
+                        $(resetId).html(optionReset)
+                    }
+                    $('#overlay').hide()
+                }  
+           })  
+      }
+
+function load_city(val,id)  
+      {  
+        $('#overlay').show()
+           $.ajax({  
+                url:"../ajax/master-data.php",  
+                method:"POST",  
+                data:{state:val},   
+                success:function(data){  
+                    let option = [];
+                    option += '<option value="" selected>Please Select</option>'
+                    for(let i=0; i < data.city.length; i++){
+                        option += `<option value="${data.city[i].id}">${data.city[i].city}</option>`
+                    }
+                    $(id).html(option)
+                    $('#overlay').hide()
+                }  
+           })  
+      }
       
 </script>
