@@ -535,7 +535,7 @@ $breadCrumbName = "Edit Voter";
             $('#message').html('');
             event.preventDefault();
             $.ajax({
-                url:"../ajax/leader/edit-voters.php",
+                url:"https://admin.pracharstore.com/ajax/edit-voters.php",
                 method:"POST",
                 data: new FormData(this),
                 dataType:"json",

@@ -247,7 +247,7 @@ $breadCrumbName = "Profile";
             $('#message').html('');
             event.preventDefault();
             $.ajax({
-                url:"../ajax/leader/edit-profile.php",
+                url:"https://admin.pracharstore.com/ajax/edit-profile.php",
                 method:"POST",
                 data: new FormData(this),
                 dataType:"json",
@@ -319,7 +319,7 @@ $breadCrumbName = "Profile";
                     $('#u_address').html('<i class="fa fa-location-arrow mr-2"></i> '+$('#state').find('option:selected').text()+','+$('#city').find('option:selected').text())
                     $('#u_designation').html('<i class="fa fa-briefcase mr-2"></i> '+data.userData.designation)
                     if(data.userData.profile_image!=null){
-                      $(".prof-image").attr("src","../uploads/"+data.userData.profile_image);
+                      $(".prof-image").attr("src","https://admin.pracharstore.com/uploads/"+data.userData.profile_image);
                     }
                     $('#overlay').hide()
                 }  

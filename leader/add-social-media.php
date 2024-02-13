@@ -74,7 +74,7 @@ $breadCrumbName = "Social Media";
             $('#message').html('');
             event.preventDefault();
             $.ajax({
-                url:"../ajax/add-social-media.php",
+                url:"https://admin.pracharstore.com/ajax/add-social-media.php",
                 method:"POST",
                 data: new FormData(this),
                 dataType:"json",

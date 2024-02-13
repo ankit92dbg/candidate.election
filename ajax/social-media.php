@@ -59,7 +59,7 @@ while($row = mysqli_fetch_array($result))
           '.$row['title'].'
       </td>
       <td class="align-middle">
-      <a href="../uploads/'.$row['image'].'" target="_blank"><img src="../uploads/'.$row['image'].'" style="width:80px;height:80px" /></a>
+      <a href="https://admin.pracharstore.com/uploads/'.$row['image'].'" target="_blank"><img src="https://admin.pracharstore.com/uploads/'.$row['image'].'" style="width:80px;height:80px" /></a>
   </td>
       <td class="align-middle">
       '.$row['description'].'

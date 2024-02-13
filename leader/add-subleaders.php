@@ -23,6 +23,7 @@ $breadCrumbName = "Add Booth Manager";
             <div class="card-body p-3">
               <form  id="userForm" enctype="multipart/form-data" role="form" method="post">
                               <input type="hidden" id="SEC_VAL" name="SEC_VAL[]" value="" />
+                              <input type="hidden" name="leader_id" value="<?php $_SESSION['user_id']; ?>" />
                 <div class="row">
                     <div class="col-12">
                         <span id="message"></span>
@@ -169,7 +170,7 @@ $breadCrumbName = "Add Booth Manager";
             $('#message').html('');
             event.preventDefault();
             $.ajax({
-                url:"../ajax/leader/add-subleaders.php",
+                url:"https://admin.pracharstore.com/ajax/add-subleaders.php",
                 method:"POST",
                 data: new FormData(this),
                 dataType:"json",

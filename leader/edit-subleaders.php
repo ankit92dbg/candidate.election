@@ -23,6 +23,7 @@ $breadCrumbName = "Update Booth Manager";
             <div class="card-body p-3">
               <form  id="userForm" enctype="multipart/form-data" role="form" method="post">
                 <input type="hidden" name="user_id" value="<?php echo $_GET['id']; ?>" />
+                <input type="hidden" name="leader_id" value="<?php $_SESSION['user_id']; ?>" />
                                 <input type="hidden" id="SEC_VAL" name="SEC_VAL[]" value="" />
                 <div class="row">
                     <div class="col-12">
@@ -143,7 +144,7 @@ $breadCrumbName = "Update Booth Manager";
             $('#message').html('');
             event.preventDefault();
             $.ajax({
-                url:"../ajax/leader/edit-subleaders.php",
+                url:"https://admin.pracharstore.com/ajax/edit-subleaders.php",
                 method:"POST",
                 data: new FormData(this),
                 dataType:"json",
