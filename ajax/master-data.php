@@ -386,6 +386,12 @@ if(isset($_POST) && $_POST['action']=='delete_compaign'){
     $r1 = mysqli_query($conn,$q1);
 }
 
+if(isset($_POST) && $_POST['action']=='delete_media'){
+    $state = [];
+    $q1 = "DELETE FROM social_media WHERE id=".$_POST['id'];
+    $r1 = mysqli_query($conn,$q1);
+}
+
 
 
 $output->AC_NO = $AC_NO;

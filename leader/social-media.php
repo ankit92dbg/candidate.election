@@ -1,5 +1,5 @@
 <?php
-$breadCrumbName = "Compaign";
+$breadCrumbName = "Social Media";
 ?>
 <?php include('../common/leader/head.php'); ?>
 <body class="g-sidenav-show   bg-gray-100">
@@ -16,10 +16,10 @@ $breadCrumbName = "Compaign";
             <div class="card-header pb-0 p-3">
               <div class="row">
                 <div class="col-lg-6 d-flex justify-content-between">
-                    <h6 class="mb-2">Compaign List</h6>
+                    <h6 class="mb-2">Social Media List</h6>
                 </div>
                 <div class="col-lg-6">
-                    <a style="float:right;" class="btn btn-primary" href="add-compaign.php">Add Compaign</a>
+                    <a style="float:right;" class="btn btn-primary" href="add-social-media.php">Add Social Media</a>
                 </div> 
                 <div class="col-lg-12">
                         <div class="row">
@@ -60,11 +60,11 @@ $breadCrumbName = "Compaign";
                   </div>
                   <div class="modal-body">
                     <input type="hidden" id="delete_id" value="" />
-                    <p><strong>Are you sure, you want to delete this compaign?</strong></p>
+                    <p><strong>Are you sure, you want to delete this blog?</strong></p>
                   </div>
                   <div class="modal-footer">
                     <button type="button" class="btn btn-success" data-bs-dismiss="modal">No</button>
-                    <button type="button" onclick="delCompaign()" class="btn btn-danger">Yes</button>
+                    <button type="button" onclick="delMedia()" class="btn btn-danger">Yes</button>
                   </div>
                 </div>
               </div>
@@ -108,7 +108,7 @@ $breadCrumbName = "Compaign";
           let total_records = $('#total_records').val()
           let search_str = $('#search_str').val()
             $.ajax({  
-                  url:"../ajax/compaign.php",  
+                  url:"../ajax/social-media.php",  
                   method:"POST",  
                   data:{page:page,total_records:total_records,search_str:search_str,leader_id:"<?php echo $_SESSION['user_id']; ?>"},  
                   success:function(data){  
@@ -137,13 +137,13 @@ $breadCrumbName = "Compaign";
         $('#exampleModal').modal('show');          
       }
 
-      function delCompaign(){
+      function delMedia(){
         $('#overlay').show()
         $('#exampleModal').modal('hide');          
         $.ajax({  
                 url:"../ajax/master-data.php",  
                 method:"POST",  
-                data:{id:$('#delete_id').val(),action:"delete_compaign"},  
+                data:{id:$('#delete_id').val(),action:"delete_media"},  
                 success:function(data){  
                     load_data()
                 }  
