@@ -1,5 +1,5 @@
 <?php
-$breadCrumbName = "Create Scheme";
+$breadCrumbName = "Create Compaign";
 ?>
 <?php include('../common/leader/head.php'); ?>
 <body class="g-sidenav-show   bg-gray-100">
@@ -16,7 +16,7 @@ $breadCrumbName = "Create Scheme";
             <div class="card-header pb-0 p-3">
               <div class="row">
                 <div class="col-lg-3 d-flex justify-content-between">
-                    <h6 class="mb-2" style="margin-top:5%;">Create Scheme</h6>
+                    <h6 class="mb-2" style="margin-top:5%;">Create Compaign</h6>
                 </div>   
               </div>
             </div>
@@ -29,19 +29,14 @@ $breadCrumbName = "Create Scheme";
                     </div>
                     <div class="col-4">
                         <div class="mb-3">
-                            <label class="label">Scheme Name</label>
-                            <input type="text" name="scheme" class="form-control form-control-lg" placeholder="Scheme name" aria-label="Email" required>
+                            <label class="label">Title</label>
+                            <input type="text" name="title" class="form-control form-control-lg" placeholder="Title" aria-label="Email" required>
                         </div>
                     </div>
                     <div class="col-4">
                         <div class="mb-3">
-                            <label class="label">Scheme Type</label>
-                            <select id="outsideLocation" name="type" class="form-select" required>
-                                <option value="" selected="">Please Select</option>
-                                <option value="0">Labharthi Center</option>
-                                <option value="1">Labharthi State</option>
-                                <option value="2">Labharthi Candidate</option>
-                            </select>
+                            <label class="label">Description</label>
+                            <textarea style="height:100px;" class="form-control form-control-lg" name="description" required></textarea>
                         </div>
                     </div>
                     <div class="col-4"></div>
@@ -49,7 +44,7 @@ $breadCrumbName = "Create Scheme";
                         <button type="submit" id="loginBtn" class="btn btn-lg btn-primary btn-lg w-100 mt-4 mb-0">Submit</button>
                     </div>
                     <div class="col-4">
-                        <a href="scheme.php" class="btn btn-lg btn-secondary btn-lg w-100 mt-4 mb-0">Back</a>
+                        <a href="compaign.php" class="btn btn-lg btn-secondary btn-lg w-100 mt-4 mb-0">Back</a>
                     </div>
                 </div>
               </form>
@@ -71,7 +66,7 @@ $breadCrumbName = "Create Scheme";
             $('#message').html('');
             event.preventDefault();
             $.ajax({
-                url:"../ajax/add-scheme.php",
+                url:"../ajax/add-compaign.php",
                 method:"POST",
                 data: new FormData(this),
                 dataType:"json",
@@ -91,9 +86,9 @@ $breadCrumbName = "Create Scheme";
                     if(!data.error)
                     {
                         $('#total_data').text(data.total_line);
-                        $('#message').html('<div class="alert alert-success" style="color:#fff">Scheme Created Successfully.</div>');
+                        $('#message').html('<div class="alert alert-success" style="color:#fff">Compaign Created Successfully.</div>');
                         setTimeout(() => {
-                            window.location.href="scheme.php"
+                            window.location.href="compaign.php"
                         }, 2000);
                     }
                     if(data.error)

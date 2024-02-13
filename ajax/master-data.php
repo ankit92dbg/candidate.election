@@ -380,6 +380,12 @@ if(isset($_POST) && $_POST['action']=='delete_scheme'){
     $r1 = mysqli_query($conn,$q1);
 }
 
+if(isset($_POST) && $_POST['action']=='delete_compaign'){
+    $state = [];
+    $q1 = "DELETE FROM compaign WHERE id=".$_POST['id'];
+    $r1 = mysqli_query($conn,$q1);
+}
+
 
 
 $output->AC_NO = $AC_NO;
