@@ -44,40 +44,40 @@ $breadCrumbName = "Voter List";
                     <input type="hidden" id="action" value="" />
                     <div id="report_1" class="tab-data">
                       <!-- <ul class="nav nav-underline">
-                        <li class="nav-item" onclick="showTab('#searchVoter','.inner-tab-data','.searchTab');$('#action').val('searchTab');load_data()">
+                        <li class="nav-item" onclick="showTab('#searchVoter','.inner-tab-data','.searchTab');$('#action').val('searchTab');load_data(1)">
                           <a class="nav-link active" aria-current="page" href="javascript:void(0);">Search</a>
                         </li>
-                        <li class="nav-item" onclick="showTab('#alpha','.inner-tab-data','.alphaTab');$('#action').val('alphaTab');load_data()">
+                        <li class="nav-item" onclick="showTab('#alpha','.inner-tab-data','.alphaTab');$('#action').val('alphaTab');load_data(1)">
                           <a class="nav-link" href="javascript:void(0);">Alphabetical List</a>
                         </li>
-                        <li class="nav-item" onclick="showTab('#agewise','.inner-tab-data','.agewiseTab');$('#action').val('agewiseTab');load_data()">
+                        <li class="nav-item" onclick="showTab('#agewise','.inner-tab-data','.agewiseTab');$('#action').val('agewiseTab');load_data(1)">
                           <a class="nav-link" href="javascript:void(0);">Agewise List</a>
                         </li>
-                        <li class="nav-item" onclick="showTab('#family','.inner-tab-data','.familyTab');$('#action').val('familyTab');load_data()">
+                        <li class="nav-item" onclick="showTab('#family','.inner-tab-data','.familyTab');$('#action').val('familyTab');load_data(1)">
                           <a class="nav-link" href="javascript:void(0);">Family Report</a>
                         </li>
-                        <li class="nav-item" onclick="showTab('#familyHead','.inner-tab-data','.familyHeadTab');$('#action').val('familyHeadTab');load_data()">
+                        <li class="nav-item" onclick="showTab('#familyHead','.inner-tab-data','.familyHeadTab');$('#action').val('familyHeadTab');load_data(1)">
                           <a class="nav-link" href="javascript:void(0);">Family Head Report</a>
                         </li>
-                        <li class="nav-item" onclick="showTab('#doubleName','.inner-tab-data','.doubleNameTab');$('#action').val('doubleNameTab');load_data()">
+                        <li class="nav-item" onclick="showTab('#doubleName','.inner-tab-data','.doubleNameTab');$('#action').val('doubleNameTab');load_data(1)">
                           <a class="nav-link" href="javascript:void(0);">Double Name List</a>
                         </li>
-                        <li class="nav-item" onclick="showTab('#married','.inner-tab-data','.marriedTab');$('#action').val('marriedTab');load_data()">
+                        <li class="nav-item" onclick="showTab('#married','.inner-tab-data','.marriedTab');$('#action').val('marriedTab');load_data(1)">
                           <a class="nav-link" href="javascript:void(0);">Married Women Report</a>
                         </li>
-                        <li class="nav-item" onclick="showTab('#single','.inner-tab-data','.singleTab');$('#action').val('singleTab');load_data()">
+                        <li class="nav-item" onclick="showTab('#single','.inner-tab-data','.singleTab');$('#action').val('singleTab');load_data(1)">
                           <a class="nav-link" href="javascript:void(0);">Single Voter List</a>
                         </li>
-                        <li class="nav-item" onclick="showTab('#address','.inner-tab-data','.addressTab');$('#action').val('addressTab');load_data()">
+                        <li class="nav-item" onclick="showTab('#address','.inner-tab-data','.addressTab');$('#action').val('addressTab');load_data(1)">
                           <a class="nav-link" href="javascript:void(0);">Address Wise List</a>
                         </li>
-                        <li class="nav-item" onclick="showTab('#surname','.inner-tab-data','.surnameTab');$('#action').val('surnameTab');load_data()">
+                        <li class="nav-item" onclick="showTab('#surname','.inner-tab-data','.surnameTab');$('#action').val('surnameTab');load_data(1)">
                           <a class="nav-link" href="javascript:void(0);">Surname Report</a>
                         </li>
-                        <li class="nav-item" onclick="showTab('#familyLabels','.inner-tab-data','.familyLabelsTab');$('#action').val('familyLabelsTab');load_data()">
+                        <li class="nav-item" onclick="showTab('#familyLabels','.inner-tab-data','.familyLabelsTab');$('#action').val('familyLabelsTab');load_data(1)">
                           <a class="nav-link" href="javascript:void(0);">Family Labels</a>
                         </li>
-                        <li class="nav-item" onclick="showTab('#sms','.inner-tab-data','.smsTab');$('#action').val('smsTab');load_data()">
+                        <li class="nav-item" onclick="showTab('#sms','.inner-tab-data','.smsTab');$('#action').val('smsTab');load_data(1)">
                           <a class="nav-link" href="javascript:void(0);">SMS</a>
                         </li>
                       </ul> -->
@@ -125,7 +125,7 @@ $breadCrumbName = "Voter List";
                           </div>
                           <div class="col-1">
                               <div class="mb-3">
-                                <button type="button" onclick="$('#action').val('searchTab');load_data()" style="margin-top: 50%;" id="loginBtn" class="btn btn-primary">Search</button>
+                                <button type="button" onclick="$('#action').val('searchTab');load_data(1)" style="margin-top: 50%;" id="loginBtn" class="btn btn-primary">Search</button>
                               </div>
                           </div>
                         </div>
@@ -156,7 +156,7 @@ $breadCrumbName = "Voter List";
                           </div> -->
                           <div class="col-2">
                               <div class="mb-3">
-                                <button type="button" onclick="$('#action').val('alphaTab');load_data()" style="margin-top: 22%;" id="loginBtn" class="btn btn-primary">Search</button>
+                                <button type="button" onclick="$('#action').val('alphaTab');load_data(1)" style="margin-top: 22%;" id="loginBtn" class="btn btn-primary">Search</button>
                               </div>
                           </div>
                         </div>  
@@ -220,7 +220,7 @@ $breadCrumbName = "Voter List";
                           </div> -->
                           <div class="col-2">
                               <div class="mb-3">
-                                <button type="button" onclick="$('#action').val('agewiseTab');load_data()" style="margin-top: 22%;" id="loginBtn" class="btn btn-primary">Search</button>
+                                <button type="button" onclick="$('#action').val('agewiseTab');load_data(1)" style="margin-top: 22%;" id="loginBtn" class="btn btn-primary">Search</button>
                               </div>
                           </div>
                         </div> 
@@ -269,7 +269,7 @@ $breadCrumbName = "Voter List";
                           </div> -->
                           <div class="col-2">
                               <div class="mb-3">
-                                <button type="button" onclick="$('#action').val('familyTab');load_data()" style="margin-top: 22%;" id="loginBtn" class="btn btn-primary">Search</button>
+                                <button type="button" onclick="$('#action').val('familyTab');load_data(1)" style="margin-top: 22%;" id="loginBtn" class="btn btn-primary">Search</button>
                               </div>
                           </div>
                         </div> 
@@ -351,7 +351,7 @@ $breadCrumbName = "Voter List";
                           </div> -->
                           <div class="col-2">
                               <div class="mb-3">
-                                <button type="button" onclick="$('#action').val('familyHeadTab');load_data()" style="margin-top: 22%;" id="loginBtn" class="btn btn-primary">Search</button>
+                                <button type="button" onclick="$('#action').val('familyHeadTab');load_data(1)" style="margin-top: 22%;" id="loginBtn" class="btn btn-primary">Search</button>
                               </div>
                           </div>
                         </div> 
@@ -388,7 +388,7 @@ $breadCrumbName = "Voter List";
                           </div> -->
                           <div class="col-2">
                               <div class="mb-3">
-                                <button type="button" onclick="$('#action').val('doubleNameTab');load_data()" style="margin-top: 22%;" id="loginBtn" class="btn btn-primary">Search</button>
+                                <button type="button" onclick="$('#action').val('doubleNameTab');load_data(1)" style="margin-top: 22%;" id="loginBtn" class="btn btn-primary">Search</button>
                               </div>
                           </div>                        
                          </div>  
@@ -436,7 +436,7 @@ $breadCrumbName = "Voter List";
                           </div> -->
                           <div class="col-2">
                               <div class="mb-3">
-                                <button type="button" onclick="$('#action').val('marriedTab');load_data()" style="margin-top: 22%;" id="loginBtn" class="btn btn-primary">Search</button>
+                                <button type="button" onclick="$('#action').val('marriedTab');load_data(1)" style="margin-top: 22%;" id="loginBtn" class="btn btn-primary">Search</button>
                               </div>
                           </div>
                         </div> 
@@ -490,7 +490,7 @@ $breadCrumbName = "Voter List";
                           </div> -->
                           <div class="col-2">
                               <div class="mb-3">
-                                <button type="button" onclick="$('#action').val('singleTab');load_data()" style="margin-top: 22%;" id="loginBtn" class="btn btn-primary">Search</button>
+                                <button type="button" onclick="$('#action').val('singleTab');load_data(1)" style="margin-top: 22%;" id="loginBtn" class="btn btn-primary">Search</button>
                               </div>
                           </div>
                         </div> 
@@ -534,7 +534,7 @@ $breadCrumbName = "Voter List";
                           </div> -->
                           <div class="col-2">
                               <div class="mb-3">
-                                <button type="button" onclick="$('#action').val('addressTab');load_data()" style="margin-top: 22%;" id="loginBtn" class="btn btn-primary">Search</button>
+                                <button type="button" onclick="$('#action').val('addressTab');load_data(1)" style="margin-top: 22%;" id="loginBtn" class="btn btn-primary">Search</button>
                               </div>
                           </div>
                         </div> 
@@ -578,7 +578,7 @@ $breadCrumbName = "Voter List";
                           </div> -->
                           <div class="col-2">
                               <div class="mb-3">
-                                <button type="button" onclick="$('#action').val('surnameTab');load_data()" style="margin-top: 22%;" id="loginBtn" class="btn btn-primary">Search</button>
+                                <button type="button" onclick="$('#action').val('surnameTab');load_data(1)" style="margin-top: 22%;" id="loginBtn" class="btn btn-primary">Search</button>
                               </div>
                           </div>
                         </div> 
@@ -621,7 +621,7 @@ $breadCrumbName = "Voter List";
                           </div> -->
                           <div class="col-2">
                               <div class="mb-3">
-                                <button type="button" onclick="$('#action').val('familyLabelsTab');load_data()" style="margin-top: 22%;" id="loginBtn" class="btn btn-primary">Search</button>
+                                <button type="button" onclick="$('#action').val('familyLabelsTab');load_data(1)" style="margin-top: 22%;" id="loginBtn" class="btn btn-primary">Search</button>
                               </div>
                           </div>
                         </div> 
@@ -670,7 +670,7 @@ $breadCrumbName = "Voter List";
                           </div> -->
                           <div class="col-2">
                               <div class="mb-3">
-                                <button type="button" onclick="$('#action').val('smsTab');load_data()" style="margin-top: 20%;" id="loginBtn" class="btn btn-primary">Search</button>
+                                <button type="button" onclick="$('#action').val('smsTab');load_data(1)" style="margin-top: 20%;" id="loginBtn" class="btn btn-primary">Search</button>
                               </div>
                           </div>
             
@@ -684,22 +684,22 @@ $breadCrumbName = "Voter List";
                     </div>
                     <div id="report_2" class="tab-data" style="display:none">
                       <!-- <ul class="nav nav-underline">
-                        <li class="nav-item" onclick="showTab('#caste','.inner-tab-data','.casteTab');$('#action').val('casteTab');load_data()">
+                        <li class="nav-item" onclick="showTab('#caste','.inner-tab-data','.casteTab');$('#action').val('casteTab');load_data(1)">
                           <a class="nav-link active" aria-current="page" href="javascript:void(0);">Caste Wise List</a>
                         </li>
-                        <li class="nav-item" onclick="showTab('#labelValue','.inner-tab-data','.labelValueTab');$('#action').val('labelValueTab');load_data()">
+                        <li class="nav-item" onclick="showTab('#labelValue','.inner-tab-data','.labelValueTab');$('#action').val('labelValueTab');load_data(1)">
                           <a class="nav-link active" aria-current="page" href="javascript:void(0);">Label Value Filter</a>
                         </li>
-                        <li class="nav-item" onclick="showTab('#areaWise','.inner-tab-data','.areaWiseTab');$('#action').val('areaWiseTab');load_data()">
+                        <li class="nav-item" onclick="showTab('#areaWise','.inner-tab-data','.areaWiseTab');$('#action').val('areaWiseTab');load_data(1)">
                           <a class="nav-link active" aria-current="page" href="javascript:void(0);">Area Wise List</a>
                         </li>
-                        <li class="nav-item" onclick="showTab('#partyWise','.inner-tab-data','.partyWiseTab');$('#action').val('partyWiseTab');load_data()">
+                        <li class="nav-item" onclick="showTab('#partyWise','.inner-tab-data','.partyWiseTab');$('#action').val('partyWiseTab');load_data(1)">
                           <a class="nav-link active" aria-current="page" href="javascript:void(0);">Party Wise List</a>
                         </li>
-                        <li class="nav-item" onclick="showTab('#deadList','.inner-tab-data','.deadListTab');$('#action').val('deadListTab');load_data()">
+                        <li class="nav-item" onclick="showTab('#deadList','.inner-tab-data','.deadListTab');$('#action').val('deadListTab');load_data(1)">
                           <a class="nav-link active" aria-current="page" href="javascript:void(0);">Dead List</a>
                         </li>
-                        <li class="nav-item" onclick="showTab('#birthday','.inner-tab-data','.birthdayTab');$('#action').val('birthdayTab');load_data()">
+                        <li class="nav-item" onclick="showTab('#birthday','.inner-tab-data','.birthdayTab');$('#action').val('birthdayTab');load_data(1)">
                           <a class="nav-link active" aria-current="page" href="javascript:void(0);">Birthday List</a>
                         </li>
                       </ul> -->
@@ -737,7 +737,7 @@ $breadCrumbName = "Voter List";
                           </div> -->
                           <div class="col-2">
                               <div class="mb-3">
-                                <button type="button" onclick="$('#action').val('casteTab');load_data()" style="margin-top: 22%;" id="loginBtn" class="btn btn-primary">Search</button>
+                                <button type="button" onclick="$('#action').val('casteTab');load_data(1)" style="margin-top: 22%;" id="loginBtn" class="btn btn-primary">Search</button>
                               </div>
                           </div>
                         </div>
@@ -775,7 +775,7 @@ $breadCrumbName = "Voter List";
                           </div> -->
                           <div class="col-2">
                               <div class="mb-3">
-                                <button type="button" onclick="$('#action').val('labelValueTab');load_data()" style="margin-top: 22%;" id="loginBtn" class="btn btn-primary">Search</button>
+                                <button type="button" onclick="$('#action').val('labelValueTab');load_data(1)" style="margin-top: 22%;" id="loginBtn" class="btn btn-primary">Search</button>
                               </div>
                           </div>
                         </div>
@@ -813,7 +813,7 @@ $breadCrumbName = "Voter List";
                           </div> -->
                           <div class="col-2">
                               <div class="mb-3">
-                                <button type="button" onclick="$('#action').val('areaWiseTab');load_data()" style="margin-top: 22%;" id="loginBtn" class="btn btn-primary">Search</button>
+                                <button type="button" onclick="$('#action').val('areaWiseTab');load_data(1)" style="margin-top: 22%;" id="loginBtn" class="btn btn-primary">Search</button>
                               </div>
                           </div>
                         </div>
@@ -851,7 +851,7 @@ $breadCrumbName = "Voter List";
                           </div> -->
                           <div class="col-2">
                               <div class="mb-3">
-                                <button type="button" onclick="$('#action').val('partyWiseTab');load_data()" style="margin-top: 22%;" id="loginBtn" class="btn btn-primary">Search</button>
+                                <button type="button" onclick="$('#action').val('partyWiseTab');load_data(1)" style="margin-top: 22%;" id="loginBtn" class="btn btn-primary">Search</button>
                               </div>
                           </div>
                         </div>
@@ -891,7 +891,7 @@ $breadCrumbName = "Voter List";
                           </div> -->
                           <div class="col-2">
                               <div class="mb-3">
-                                <button type="button" onclick="$('#action').val('deadListTab');load_data()" style="margin-top: 22%;" id="loginBtn" class="btn btn-primary">Search</button>
+                                <button type="button" onclick="$('#action').val('deadListTab');load_data(1)" style="margin-top: 22%;" id="loginBtn" class="btn btn-primary">Search</button>
                               </div>
                           </div>
                         </div>
@@ -953,7 +953,7 @@ $breadCrumbName = "Voter List";
                           </div> -->
                           <div class="col-2">
                               <div class="mb-3">
-                                <button type="button" onclick="$('#action').val('birthdayTab');load_data()" style="margin-top: 22%;" id="loginBtn" class="btn btn-primary">Search</button>
+                                <button type="button" onclick="$('#action').val('birthdayTab');load_data(1)" style="margin-top: 22%;" id="loginBtn" class="btn btn-primary">Search</button>
                               </div>
                           </div>
                         </div>
@@ -989,7 +989,7 @@ $breadCrumbName = "Voter List";
                           </div>
                           <div class="col-2">
                               <div class="mb-3">
-                                <button type="button" onclick="$('#action').val('educationListTab');load_data()" style="margin-top:22%;" id="loginBtn" class="btn btn-primary">Search</button>
+                                <button type="button" onclick="$('#action').val('educationListTab');load_data(1)" style="margin-top:22%;" id="loginBtn" class="btn btn-primary">Search</button>
                               </div>
                           </div>
                         </div>
@@ -1019,7 +1019,7 @@ $breadCrumbName = "Voter List";
                           </div>
                           <div class="col-2">
                               <div class="mb-3">
-                                <button type="button" onclick="$('#action').val('homeShiftTab');load_data()" style="margin-top:22%;" id="loginBtn" class="btn btn-primary">Search</button>
+                                <button type="button" onclick="$('#action').val('homeShiftTab');load_data(1)" style="margin-top:22%;" id="loginBtn" class="btn btn-primary">Search</button>
                               </div>
                           </div>
                         </div>
@@ -1041,7 +1041,7 @@ $breadCrumbName = "Voter List";
                           </div>
                           <div class="col-2">
                               <div class="mb-3">
-                                <button type="button" onclick="$('#action').val('newVotersTab');load_data()" style="margin-top:22%;" id="loginBtn" class="btn btn-primary">Search</button>
+                                <button type="button" onclick="$('#action').val('newVotersTab');load_data(1)" style="margin-top:22%;" id="loginBtn" class="btn btn-primary">Search</button>
                               </div>
                           </div>
                         </div>
@@ -1095,7 +1095,7 @@ $breadCrumbName = "Voter List";
                           </div>
                           <div class="col-2">
                               <div class="mb-3">
-                                <button type="button" onclick="$('#action').val('professionalTab');load_data()" style="margin-top:22%;" id="loginBtn" class="btn btn-primary">Search</button>
+                                <button type="button" onclick="$('#action').val('professionalTab');load_data(1)" style="margin-top:22%;" id="loginBtn" class="btn btn-primary">Search</button>
                               </div>
                           </div>
                         </div>
@@ -1125,7 +1125,7 @@ $breadCrumbName = "Voter List";
                           </div>
                           <div class="col-2">
                               <div class="mb-3">
-                                <button type="button" onclick="$('#action').val('outsideLocationTab');load_data()" style="margin-top:22%;" id="loginBtn" class="btn btn-primary">Search</button>
+                                <button type="button" onclick="$('#action').val('outsideLocationTab');load_data(1)" style="margin-top:22%;" id="loginBtn" class="btn btn-primary">Search</button>
                               </div>
                           </div>
                         </div>
@@ -1165,7 +1165,7 @@ $breadCrumbName = "Voter List";
                           </div>
                           <div class="col-2">
                               <div class="mb-3">
-                                <button type="button" onclick="$('#action').val('labharthiTab');load_data()" style="margin-top:22%;" id="loginBtn" class="btn btn-primary">Search</button>
+                                <button type="button" onclick="$('#action').val('labharthiTab');load_data(1)" style="margin-top:22%;" id="loginBtn" class="btn btn-primary">Search</button>
                               </div>
                           </div>
                         </div>
@@ -1200,7 +1200,7 @@ $breadCrumbName = "Voter List";
                           </div>
                           <div class="col-2">
                               <div class="mb-3">
-                                <button type="button" onclick="$('#action').val('approachTab');load_data()" style="margin-top:22%;" id="loginBtn" class="btn btn-primary">Search</button>
+                                <button type="button" onclick="$('#action').val('approachTab');load_data(1)" style="margin-top:22%;" id="loginBtn" class="btn btn-primary">Search</button>
                               </div>
                           </div>
                         </div>
@@ -1234,7 +1234,7 @@ $breadCrumbName = "Voter List";
                           </div>
                           <div class="col-2">
                               <div class="mb-3">
-                                <button type="button" onclick="$('#action').val('candidateTab');load_data()" style="margin-top:22%;" id="loginBtn" class="btn btn-primary">Search</button>
+                                <button type="button" onclick="$('#action').val('candidateTab');load_data(1)" style="margin-top:22%;" id="loginBtn" class="btn btn-primary">Search</button>
                               </div>
                           </div>
                         </div>
@@ -1294,7 +1294,7 @@ $breadCrumbName = "Voter List";
 <script>
  $(document).ready(function(){  
     //   $('#action').val('searchTab')
-      load_data();  
+      load_data(1);  
       load_other_data();  
        
       $(document).on('click', '.pagination_link', function(){  
@@ -1308,9 +1308,9 @@ $breadCrumbName = "Voter List";
  }); 
  function load_data(page)  
       {  
-        if(page==''){
-            page=1
-        }
+        // if(page==''){
+        //     page=1
+        // }
         if(page!=''){
           $('#overlay').show()
           // let total_records = $('#total_records').val()
@@ -1513,7 +1513,7 @@ function load_other_data(){
                 method:"POST",  
                 data:{user_id:$('#delete_id').val(),action:"delete_user"},  
                 success:function(data){  
-                    load_data()
+                    load_data(1)
                 }  
            }) 
       }
@@ -1553,14 +1553,14 @@ function load_other_data(){
             $('#r2Btn').show()
             $('#action').val('casteTab')
             showTab('#caste','.inner-tab-data','.casteTab');$('#action').val('casteTab');
-            load_data()
+            load_data(1)
         }
       }
   
     function setLanguage(val){
         localStorage.setItem('language',val)
         $('#language option[value="'+val+'"]').attr("selected", "selected");
-        load_data()
+        load_data(1)
       }
       function setFirstLanguage(){
     
