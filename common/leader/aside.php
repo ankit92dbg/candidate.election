@@ -186,6 +186,18 @@ $endPart = explode('.',$endPart);
                         <li class="nav-item sub-menu" onclick="showTab('#labharthi','.inner-tab-data','.labharthiTab');$('#action').val('labharthiTab');load_data()">
                           <a class="nav-link" aria-current="page" href="javascript:void(0);">Labharthi List</a>
                         </li>
+                        <li class="nav-item sub-menu" onclick="showTab('#approach','.inner-tab-data','.approachTab');$('#action').val('approachTab');load_data()">
+                          <a class="nav-link" aria-current="page" href="javascript:void(0);">Approach List</a>
+                        </li>
+                        <li class="nav-item sub-menu" onclick="showTab('#candidate','.inner-tab-data','.candidateTab');$('#action').val('candidateTab');load_data()">
+                          <a class="nav-link" aria-current="page" href="javascript:void(0);">Candidate Like List</a>
+                        </li>
+                        <li class="nav-item sub-menu" onclick="showTab('#approach','.inner-tab-data','.approachTab');$('#action').val('approachTab');load_data()">
+                          <a class="nav-link" aria-current="page" href="javascript:void(0);">Approach List</a>
+                        </li>
+                        <li class="nav-item sub-menu" onclick="showTab('#candidate','.inner-tab-data','.candidateTab');$('#action').val('candidateTab');load_data()">
+                          <a class="nav-link" aria-current="page" href="javascript:void(0);">Voter Surey List</a>
+                        </li>
           </ul>
         </li>
         <li class="nav-item">
@@ -212,14 +224,14 @@ $endPart = explode('.',$endPart);
             <span class="nav-link-text ms-1">Social Media</span>
           </a>
         </li>
-        <li class="nav-item">
+        <!-- <li class="nav-item">
           <a class="nav-link" href="#">
             <div class="icon icon-shape icon-sm border-radius-md text-center me-2 d-flex align-items-center justify-content-center">
               <i class="fa fa-file text-warning text-sm opacity-10" style="color:#c2c100 !important;"></i>
             </div>
             <span class="nav-link-text ms-1">Voter Survey</span>
           </a>
-        </li>
+        </li> -->
         <!-- <li class="nav-item">
           <a class="nav-link <?php echo ($endPart[0]=='upload-csv') ? 'active' : ''; ?>" href="upload-csv.php">
             <div class="icon icon-shape icon-sm border-radius-md text-center me-2 d-flex align-items-center justify-content-center">
