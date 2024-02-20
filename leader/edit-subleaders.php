@@ -23,7 +23,7 @@ $breadCrumbName = "Update Booth Manager";
             <div class="card-body p-3">
               <form  id="userForm" enctype="multipart/form-data" role="form" method="post">
                 <input type="hidden" name="user_id" value="<?php echo $_GET['id']; ?>" />
-                <input type="hidden" name="leader_id" value="<?php $_SESSION['user_id']; ?>" />
+                <input type="hidden" name="leader_id" value="<?php echo $_SESSION['user_id']; ?>" />
                                 <input type="hidden" id="SEC_VAL" name="SEC_VAL[]" value="" />
                 <div class="row">
                     <div class="col-12">
@@ -185,7 +185,7 @@ $breadCrumbName = "Update Booth Manager";
            $.ajax({  
                 url:"../ajax/master-data.php",  
                 method:"POST",  
-                data:{action:"SEC_DISTINCT", user_id:"<?php echo $_GET['cader_id']; ?>"},  
+                data:{action:"SEC_DISTINCT", user_id:"<?php echo $_SESSION['user_id']; ?>"},  
                 success:function(data){  
                     let option = [];
                     let secVal = [];
